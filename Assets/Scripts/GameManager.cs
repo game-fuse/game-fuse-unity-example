@@ -294,6 +294,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("GameFuse sign up success");
             screens[1].SetActive(false);
             screens[0].SetActive(true);
+
         }
         else
         {
@@ -301,6 +302,7 @@ public class GameManager : MonoBehaviour
             signUpErrorText.text = message;
         }
     }
+
 
     // Function to show Sign In Screen
     public void SignOutUser()
