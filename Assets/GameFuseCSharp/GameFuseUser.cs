@@ -466,7 +466,9 @@ namespace GameFuseCSharp
                     print(attribute.Key + "," + attribute.Value);
                 }
 
-                dirtyAttributes = new Dictionary<string, string>(); 
+                if (isFromSync){
+                    dirtyAttributes = new Dictionary<string, string>(); 
+                }
             }
 
             GameFuseUtilities.HandleCallback(request, "Attribute has been added to user", callback);
