@@ -294,9 +294,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("GameFuse sign up success");
             screens[1].SetActive(false);
             screens[0].SetActive(true);
-            GameFuseUser.CurrentUser.SetAttributeLocal("TEST1", "6");
-            GameFuseUser.CurrentUser.SetAttributeLocal("TEST2", "7");
-            GameFuseUser.CurrentUser.SyncLocalAttributes(this.AttributesSynced);
 
         }
         else
@@ -304,10 +301,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("GameFuse sign up failed: " + message);
             signUpErrorText.text = message;
         }
-    }
-
-    public void AttributesSynced(string message, bool hasError){
-        Debug.Log("Attributes Synced!");
     }
 
 
